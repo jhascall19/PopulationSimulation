@@ -24,9 +24,9 @@ You need a computer that can run .java files, preferably on intelliJ. To run the
 
 ### Notes for future collaborators
 There are many things uncompleted with this program that can be easily done. Such things include:
-⋅⋅* Disease, famine, events of change in the biome
-⋅⋅* More complicated chain of energy flow, add more to the chain, decomposers, stationary animals
-..* more advanced movement and intelligence in the creatures (possibly add neural networks for decision making)
-⋅⋅* Random maps and biomes
+1. Disease, famine, events of change in the biome
+2. More complicated chain of energy flow, add more to the chain, decomposers, stationary animals
+3. more advanced movement and intelligence in the creatures (possibly add neural networks for decision making)
+4. Random maps and biomes
 For those who are interested, here is a great youtube video containing some of the things that you might want to see in your program.
 [By Carykh](https://www.youtube.com/watch?v=jAQNiL3o5lU)
