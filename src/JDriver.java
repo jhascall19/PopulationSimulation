@@ -221,9 +221,7 @@ int counter = 0;
             jDriver.repaint();
             Thread.sleep(20); //waits a bit before re-running
 counter++;
-            if (counter%500 == 0){
-                Analytics();
-            }
+
 
 
         }

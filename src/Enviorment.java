@@ -30,7 +30,7 @@ public class Enviorment extends Applet {
     public ArrayList<Rectangle> getFoodRects() {
         return foodRects;
     }
-
+//instances
     public Enviorment(int numAnimal){
         Random r = new Random();
         animals = new ArrayList<>();
@@ -314,7 +314,7 @@ private Point moveWithPurpose(Animal a, Point point) { // looks for all the squa
                   double rand = r.nextDouble();
                   if (rand > .97) {
 
-
+// if the odds are good, then theres a 33% chance that the trait will move up, down, or stay the same... This adds to genetic diversity, while not producing offspring comepletely opposite from their parents.
                       int mutateSpeed;
                       int mutateSize;
                       double probSpeed = r.nextDouble();
@@ -389,7 +389,7 @@ private Point moveWithPurpose(Animal a, Point point) { // looks for all the squa
 
 //CANNIBAL STUFF
 
-
+//moves with purpose all the time
           public void moveCannibals(){
               Random r = new Random();
               for (int p = 0; p < cannibals.size(); p++) {
@@ -404,7 +404,7 @@ private Point moveWithPurpose(Animal a, Point point) { // looks for all the squa
                       preyLocation = animalPoints.get(cannibals.get(p).getAnimal4Life());
                   }
 
-                  if (cannibalPoints.get(p).distance(preyLocation) <= 15 ) {
+                  if (cannibalPoints.get(p).distance(preyLocation) <= 15 ) { //this distance can be tweaked to
                       //System.out.println(animalPoints.get(cannibals.get(p).getAnimal4Life()));
                       cannibalism(cannibals.get(p), animals.get(cannibals.get(p).getAnimal4Life()));
                   } else {
@@ -446,8 +446,8 @@ private Point moveWithPurpose(Animal a, Point point) { // looks for all the squa
                       cannibalPoints.get(p).setLocation((int) moveamtX, (int) moveamtY); //sets location for the purpose
 
                       double energyloss = 0;
-                      energyloss += (cannibals.get(p).getSpeed() );
-                      energyloss += (cannibals.get(p).getSize() ); //alter this to get better cannis
+                      energyloss += (cannibals.get(p).getSpeed()/1.8 );
+                      energyloss += (cannibals.get(p).getSize()/1.7 ); //alter this to get better cannis
 
                       while (energyloss > 0) {
                           cannibals.get(p).setEnergy(cannibals.get(p).getEnergy() - 1);
@@ -463,14 +463,14 @@ private Point moveWithPurpose(Animal a, Point point) { // looks for all the squa
 
 
 
-
+// if a cannibal gets prey, then this is the process of eating/death
 public void cannibalism(Cannibal cannibal, Animal animal){
     cannibal.setEnergy((int) (cannibal.getEnergy() + (animal.energy))); //big boys get more food
     animal.setEnergy(animal.getEnergyMin());
     animals.remove(animal);
     animalPoints.remove(cannibal.getAnimal4Life());
 
-    System.out.println("REMOVED");
+    System.out.println("REMOVED"); //indicates eaten
     //System.out.println(cannibal.getPosition() + "  This is the pos");
     cannibalBabies(cannibal);
 
@@ -479,7 +479,7 @@ public void cannibalism(Cannibal cannibal, Animal animal){
     cannibalBabies(cannibal);
     cannibalBabies(cannibal);
 }
-
+//creaates a baby with mutated genetics... Same as described above
 public void cannibalBabies(Cannibal cannibal){
     Random r = new Random();
     double odds = r.nextDouble();

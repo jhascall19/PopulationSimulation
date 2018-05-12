@@ -4,6 +4,7 @@ import java.util.Random;
 /**
  * Created by jhascall19 on 3/1/18.
  */
+//same as regular animals, Each cannibal has the same parameters except for an animal for ife
 public class Cannibal extends Animal {
 
 
@@ -11,12 +12,12 @@ public class Cannibal extends Animal {
 
 
 
-
+//instance of cannibal
     public Cannibal(int size, int speed, int indexOfAnimal4Life){
         this.size = size;
         this.speed = speed;
 this.Animal4Life = indexOfAnimal4Life;
-// FIXME: 3/14/18 FIND AN ALGORITHM for color
+//TO ADD: an algorithm for color
 
         switch (size){
             case 1: c = (new Color(255,0,0));
@@ -48,9 +49,7 @@ this.Animal4Life = indexOfAnimal4Life;
 
 
 
-//    public void setPosition(Point position) {
-//        this.position = (Point)position.clone();
-//    }
+
 
 
 

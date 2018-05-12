@@ -9,10 +9,10 @@ import java.util.Random;
 public class FoodSquare {
     private Color color;
     private double foodAmt;
-    public static final double MAX_FOOD = 8000; //255
+    public static final double MAX_FOOD = 10000; //255
     public static final double MIN_FOOD = 1;
-    public static final double REGAIN_AMT = 15;
-    public static final double REGAIN_AMT_DRAINED = REGAIN_AMT/3;
+    public static final double REGAIN_AMT = 25;
+    public static final double REGAIN_AMT_DRAINED = REGAIN_AMT/5;
     private Enviorment enviorment;
 
 
